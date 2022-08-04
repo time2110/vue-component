@@ -1,4 +1,4 @@
-// 拷贝函数
+// 深克隆
 export const deepClone = (target) => {
     const type = getObjType(target)
     let result;
