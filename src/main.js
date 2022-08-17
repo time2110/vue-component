@@ -11,11 +11,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'github-markdown-css'
 // 代码高亮
 import 'highlight.js/styles/github.css'
-import hljs from 'highlight.js'
+import highlight from 'highlight.js'
 Vue.directive('highlight', function(el) {
   const blocks = el.querySelectorAll('pre code')
   blocks.forEach(block => {
-    hljs.highlightBlock(block)
+    highlight.highlightBlock(block)
   })
 })
 // 引入normalize.css
