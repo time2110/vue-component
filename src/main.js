@@ -7,8 +7,7 @@ import VueXss from 'vue-xss'
 // 引入element
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-
-// markdown样式
+// 引入markdown样式
 import 'github-markdown-css'
 // 代码高亮
 import 'highlight.js/styles/github.css'
@@ -19,6 +18,8 @@ Vue.directive('highlight', function(el) {
     hljs.highlightBlock(block)
   })
 })
+// 引入normalize.css
+import 'normalize.css'
 
 /*使用例子 this.$xss(message) */
 Vue.use(VueXss)
