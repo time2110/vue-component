@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueAnimateNumber from 'vue-animate-number'
 import Avue from '@smallwei/avue';
+import VueAnimateNumber from 'vue-animate-number'
 import '@smallwei/avue/lib/index.css';
 import VueXss from 'vue-xss'
 // 引入element
