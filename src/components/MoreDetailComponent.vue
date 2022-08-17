@@ -102,7 +102,7 @@
         }
 
         .exp:checked + .more-detail-text .btn::after {
-            display: none;
+            /*display: none;*/
             content: '收起'
         }
 
