@@ -22,6 +22,10 @@
                 <button>上传图片</button>
             </template>
         </ImgCutter>
+
+        <!--md文件渲染-->
+        <el-divider content-position="left">md文件渲染</el-divider>
+        <platform-md v-highlight class="markdown-body"></platform-md>
     </div>
 </template>
 
@@ -30,13 +34,15 @@
     import DataDisplay from "@/components/DataDisplay";
     import MoreDetailComponent from "@/components/MoreDetailComponent";
     import ImgCutter from 'vue-img-cutter'
+    import PlatformMd from '@/markdown/test.md'
 
     export default {
         name: 'App',
         components: {
             MoreDetailComponent,
             DataDisplay,
-            ImgCutter
+            ImgCutter,
+            PlatformMd
         },
         data() {
             return {

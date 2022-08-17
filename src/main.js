@@ -4,9 +4,21 @@ import VueAnimateNumber from 'vue-animate-number'
 import Avue from '@smallwei/avue';
 import '@smallwei/avue/lib/index.css';
 import VueXss from 'vue-xss'
-
+// 引入element
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
+// markdown样式
+import 'github-markdown-css'
+// 代码高亮
+import 'highlight.js/styles/github.css'
+import hljs from 'highlight.js'
+Vue.directive('highlight', function(el) {
+  const blocks = el.querySelectorAll('pre code')
+  blocks.forEach(block => {
+    hljs.highlightBlock(block)
+  })
+})
 
 /*使用例子 this.$xss(message) */
 Vue.use(VueXss)
