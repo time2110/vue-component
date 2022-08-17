@@ -22,6 +22,7 @@
     "vue-count-to": "^1.0.13",
     "vue-loader": "15",
     "vue-markdown-loader": "^2.5.0",
+    "vue-router": "^3.5.4",
     "vue-template-compiler": "^2.6.10",
     "vue-xss": "^1.0.4"
   },
