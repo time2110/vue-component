@@ -1,10 +1,11 @@
 <template>
     <div id="app">
         <!--数字滚动展示-->
-        <div>数字滚动展示</div>
+        <el-divider content-position="left">数字滚动展示</el-divider>
         <DataDisplay :endVal="100000.22" :decimals="2" :duration="1000" style="color: red"></DataDisplay>
+
         <!--查看更多-->
-        <div>查看更多</div>
+        <el-divider content-position="left">查看更多</el-divider>
         <div style="width: 800px;">
             <MoreDetailComponent
                     :content="msg"
@@ -13,11 +14,12 @@
                     :btn-style="'font-size:14px'"
                     :text-style="'font-size:14px;line-height:1.7;max-height:5.1em'"></MoreDetailComponent>
         </div>
+
         <!--图片上传-->
-        <div>图片上传</div>
+        <el-divider content-position="left">图片上传</el-divider>
         <ImgCutter @cutDown="cutDown">
             <template #open>
-                <button>Choose image</button>
+                <button>上传图片</button>
             </template>
         </ImgCutter>
     </div>
