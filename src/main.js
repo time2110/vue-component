@@ -5,7 +5,7 @@ import VueAnimateNumber from 'vue-animate-number'
 import '@smallwei/avue/lib/index.css';
 
 import VueXss from 'vue-xss'
-/*使用例子 this.$xss(message) */
+// 使用例子 this.$xss(message)
 
 // 引入element
 import ElementUI from 'element-ui';
@@ -32,11 +32,18 @@ Vue.use(VueRouter)
 //引入项目所编写的路由器（项目单独的router文件夹下的index.js文件）
 import router from '@/router'
 
+import * as filters from './filters'
+
 Vue.use(VueXss)
 Vue.use(Avue);
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 Vue.use(VueAnimateNumber)
+
+// 加载过滤器
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 new Vue({
   router,
   render: h => h(App),

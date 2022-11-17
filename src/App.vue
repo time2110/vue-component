@@ -12,7 +12,7 @@
                     :id="'introduction-detail'"
                     :line="3"
                     :btn-style="'font-size:14px'"
-                    :text-style="'font-size:14px;line-height:1.7;max-height:5.1em'"></MoreDetailComponent>
+                    :text-style="'font-size:14px;line-height:1.5;max-height:4.5em'"></MoreDetailComponent>
         </div>
 
         <!--图片上传-->
@@ -27,6 +27,8 @@
         <el-divider content-position="left">md文件渲染</el-divider>
         <platform-md v-highlight class="markdown-body"></platform-md>
 
+        <el-divider content-position="left">日期过滤器</el-divider>
+        <div>{{date | textDateFormat('yyyy')}}</div>
         <!-- 路由出口 -->
         <!-- 路由匹配到的组件将渲染在这里 -->
         <router-view></router-view>
@@ -58,7 +60,8 @@
                     'hich aims to uniform the user interface specs for internal background projects, lower the unnecessary c' +
                     'ost of design differences and implementation and liberate the resources of design and front-end development.',
                 show: true,
-                imgDataUrl: '' // the datebase64 url of created image
+                imgDataUrl: '', // the datebase64 url of created image
+                date: '2018-10-1 07:08:03'
             }
         },
         methods: {
@@ -81,7 +84,11 @@
 </style>
 <style lang="scss" scoped>
     .wrapper2 /deep/ .more-detail-text::before {
-        height: calc(100% - 23px) !important;
+        height: calc(100% - 21px) !important;
+    }
+    .wrapper2 /deep/ .more-detail-text::after {
+        box-shadow: inset calc(100px - 999vw) calc(21px - 999vw) 0 0 #fff;
+        margin-left: -100px;
     }
 </style>
 
