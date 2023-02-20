@@ -78,7 +78,9 @@ docker pull jenkins/jenkins
 >
 > 192.168.XX.XX:10240/manage/configureSecurity/，禁用代理
 
-自动化部署：https://juejin.cn/post/7127302949797101604#heading-22
+自动化部署：
+https://juejin.cn/post/7127302949797101604#heading-22
+https://blog.csdn.net/ming19951224/article/details/109633920
 
 ## 安装phpstudy
 
